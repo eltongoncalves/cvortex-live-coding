@@ -13,6 +13,8 @@ services:
             MYSQL_PASSWORD: admin
         ports:
             - "3306:3306"
+        networks:
+            - backend_network  # Nome da rede personalizada para o serviço MySQL
 
     phpmyadmin:
         depends_on:
@@ -30,3 +32,7 @@ services:
 
 volumes:
     db_data: {}
+
+networks:
+    backend_network:
+        driver: bridge
