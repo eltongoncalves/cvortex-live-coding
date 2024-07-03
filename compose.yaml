@@ -19,7 +19,7 @@ services:
             - db
         image: phpmyadmin/phpmyadmin
         ports:
-            - "8080:80"
+            - "9000:80"
         restart: always
           # volumes:
         # - .:/usr/local/etc/php
