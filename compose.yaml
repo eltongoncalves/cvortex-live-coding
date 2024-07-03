@@ -29,6 +29,8 @@ services:
             PMA_HOST: db
             MYSQL_ROOT_PASSWORD: root
             UPLOAD_LIMIT: 202M
+        networks:
+            - backend_network  # Nome da rede personalizada para o serviço MySQL
 
 volumes:
     db_data: {}
